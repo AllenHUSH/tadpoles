@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <router-view />
-    <van-tabbar route>
+    <van-tabbar id="tabbar" route :border="true" active-color="#2c3e50">
       <van-tabbar-item to="/home" icon="star-o">动态</van-tabbar-item>
       <van-tabbar-item to="/list" icon="apps-o">物品</van-tabbar-item>
       <van-tabbar-item to="/map" icon="location-o">地图</van-tabbar-item>
@@ -38,5 +38,8 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+#tabbar{
+  bottom: 25px;
 }
 </style>
