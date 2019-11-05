@@ -1,16 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
+    <van-tabbar route>
+      <van-tabbar-item to="/home" icon="star-o">动态</van-tabbar-item>
+      <van-tabbar-item to="/list" icon="apps-o">物品</van-tabbar-item>
+      <van-tabbar-item to="/map" icon="location-o">地图</van-tabbar-item>
+      <van-tabbar-item to="/user" icon="setting-o">我的</van-tabbar-item>
+    </van-tabbar>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+    };
+  }
+};
+</script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
